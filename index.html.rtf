@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0  <!DOCTYPE html>\
+<html lang="de">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <title>F\'fcr Ola 
+\f1 \uc0\u55357 \u56470 
+\f0 </title>\
+\
+  <style>\
+    body \{\
+      margin: 0;\
+      height: 100vh;\
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);\
+      font-family: Arial, sans-serif;\
+      display: flex;\
+      flex-direction: column;\
+      align-items: center;\
+      justify-content: center;\
+      overflow: hidden;\
+      text-align: center;\
+    \}\
+\
+    h1, p \{\
+      color: white;\
+      padding: 0 15px;\
+    \}\
+\
+    h1 \{\
+      font-size: 2.2em;\
+      margin-bottom: 5px;\
+    \}\
+\
+    p \{\
+      font-size: 1.15em;\
+      margin-bottom: 25px;\
+    \}\
+\
+    button \{\
+      font-size: 1.2em;\
+      padding: 15px 32px;\
+      border: none;\
+      border-radius: 40px;\
+      margin: 10px;\
+      cursor: pointer;\
+      transition: transform 0.2s;\
+    \}\
+\
+    #yes \{\
+      background-color: #ff4d6d;\
+      color: white;\
+      z-index: 2;\
+    \}\
+\
+    #no \{\
+      background-color: white;\
+      color: #ff4d6d;\
+      position: absolute;\
+      bottom: 130px;\
+      z-index: 1;\
+    \}\
+\
+    .heart \{\
+      position: absolute;\
+      font-size: 2rem;\
+      animation: floatUp 4s linear forwards;\
+    \}\
+\
+    @keyframes floatUp \{\
+      from \{ transform: translateY(0); opacity: 1; \}\
+      to \{ transform: translateY(-700px); opacity: 0; \}\
+    \}\
+  </style>\
+</head>\
+\
+<body>\
+\
+  <h1>Ola 
+\f1 \uc0\u55357 \u56470 
+\f0 </h1>\
+  <p>Willst du mein Valentinsdate sein? 
+\f1 \uc0\u55358 \u56688 
+\f0 </p>\
+\
+  <button id="yes">Ja 
+\f1 \uc0\u55357 \u56472 
+\f0 </button>\
+  <button id="no">Nein 
+\f1 \uc0\u55357 \u56904 
+\f0 </button>\
+\
+  <!-- Romantische arabische Musik -->\
+  <audio id="music">\
+    <source src="https://cdn.pixabay.com/audio/2023/03/09/audio_8e8f2a4c3c.mp3" type="audio/mpeg">\
+  </audio>\
+\
+  <script>\
+    const noBtn = document.getElementById("no");\
+    const texts = [\
+      "Nein 
+\f1 \uc0\u55357 \u56904 
+\f0 ",\
+      "Wirklich nein? 
+\f1 \uc0\u55357 \u56883 
+\f0 ",\
+      "Fast! 
+\f1 \uc0\u55357 \u56847 
+\f0 ",\
+      "Haha nope 
+\f1 \uc0\u55357 \u56838 
+\f0 ",\
+      "Versuch's nochmal 
+\f1 \uc0\u55357 \u56860 
+\f0 ",\
+      "Okay\'85 Ja 
+\f1 \uc0\u55357 \u56844 
+\f0 "\
+    ];\
+\
+    function escapeButton() \{\
+      noBtn.style.left = Math.random() * 80 + "%";\
+      noBtn.style.bottom = Math.random() * 250 + 80 + "px";\
+      noBtn.style.transform = "rotate(" + (Math.random() * 40 - 20) + "deg)";\
+      noBtn.textContent = texts[Math.floor(Math.random() * texts.length)];\
+    \}\
+\
+    noBtn.addEventListener("mouseover", escapeButton);\
+    noBtn.addEventListener("touchstart", escapeButton);\
+\
+    document.getElementById("yes").addEventListener("click", () => \{\
+      document.getElementById("music").play();\
+\
+      document.body.innerHTML = `\
+        <h1>YAY 
+\f1 \uc0\u55358 \u56697 \u55357 \u56470 
+\f0 </h1>\
+        <p>\
+          Ich liebe dich \'fcber alles Hayati 
+\f1 \uc0\u55357 \u56478 
+\f0 <br><br>\
+          Wir sehen uns am <strong>10.02</strong> 
+\f1 \uc0\u55357 \u56856 
+\f0 \
+        </p>\
+      `;\
+\
+      for (let i = 0; i < 40; i++) \{\
+        const heart = document.createElement("div");\
+        heart.className = "heart";\
+        heart.innerHTML = "
+\f1 \uc0\u10084 \u65039 
+\f0 ";\
+        heart.style.left = Math.random() * 100 + "%";\
+        heart.style.bottom = "-20px";\
+        heart.style.animationDuration = (Math.random() * 2 + 3) + "s";\
+        document.body.appendChild(heart);\
+      \}\
+    \});\
+  </script>\
+\
+</body>\
+</html>}
