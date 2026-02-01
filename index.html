@@ -134,14 +134,20 @@
     noBtn.addEventListener("mouseover", escapeButton);\
     noBtn.addEventListener("touchstart", escapeButton);\
 \
-    document.getElementById("yes").addEventListener("click", () => \{\
-      document.getElementById("music").play();\
-\
-      document.body.innerHTML = `\
-        <h1>YAY 
-\f1 \uc0\u55358 \u56697 \u55357 \u56470 
-\f0 </h1>\
-        <p>\
+   document.getElementById("yes").addEventListener("click", () => {
+  const music = document.getElementById("music");
+  music.play();
+
+  setTimeout(() => {
+    document.body.innerHTML = `
+      <h1>YAY 🥹💖</h1>
+      <p>
+        Ich liebe dich über alles Hayati 💞<br><br>
+        Wir sehen uns am <strong>10.02</strong> 😘
+      </p>
+    `;
+  }, 500);
+});\
           Ich liebe dich \'fcber alles Hayati 
 \f1 \uc0\u55357 \u56478 
 \f0 <br><br>\
